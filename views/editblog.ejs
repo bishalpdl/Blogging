@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/public/css/editblog.css">
+    <link rel="shortcut icon" href="../public/img/blogging.png" type="image/png">
+
+</head>
+<body>
+<%- include('partials/header.ejs') %>
+
+<section class='content'>   
+    <div class="title">Edit your Blog</div>
+    <div>
+
+        <form action="/editblog/<%= blog.id %>" method="POST">
+
+            <label for="Title">Title:</label>
+            <input type="text" id="title" name="title" required value="<%= blog.title %>"><br />
+
+            <span for="description">Description:</span>
+            <textarea id="description"required name="description" value="hello" rows="4" cols="100"><%= blog.description %></textarea>
+            <br />
+            <input type="submit" value="Update">
+           
+        </form>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="shortcut icon" href="../public/img/blogging.png" type="image/png">
+
+
+    <link rel = "stylesheet" href = "/public/css/blogbyid.css" />
+
+
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+<section class = 'blog'>
+    <section class = 'title'>
+        <%= blog.title %>
+    </section>
+
+    <section class ="info">
+        <ul>
+            <li>Author: <%= blog.author_username %></li>
+            <li>Published on: <%= blog.createdAt.toLocaleDateString() %></li>
+            <li>Views: <%= blog.visitor %></li>
+        </ul>
+    </section>
+
+    <section class="pic">
+        <div class="pic-pic">
+            <!-- <img src="/public/img/future.png"> -->
+            <img src="data:image/jpeg;base64,<%= blog.picture %>">
+        </div>
+    </section>
+
+    <section class = 'description'>
+        <%= blog.description %>  
+    </section>
+</section>
+
+<section class = 'comment'>
+    <div>
+        <h3> Comments</h3>
+        <form action="/writecomment/<%= blog._id %>" method="POST">
+            <!-- <input type="text" name = "comment" placeholder="Post your Comment"> -->
+
+            <textarea id="textarea" required placeholder = "Write your comment" name="comment" rows="4" cols="100"></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <% for (var comme of comment) { %>
+            <span class = 'comment-ith'><%= comme.comment%> &nbsp;---by &nbsp; <span style="text-decoration:underline; font-style: italic ;""><%= comme.username %></span></span>
+        <%} %>
+
+    </div>
+</section>
+
+
+<script src="public/js/first.js"></script>
+
+</body>
+</html>

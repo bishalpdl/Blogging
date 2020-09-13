@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+
+</head>
+<body>
+
+
+    <!-- <img src="public/img/icon.png"> -->
+<section class = "nav-bar">
+    <ul>    
+        <!-- <li><img src="public/img/icon.png"></li> -->
+        <li><h2>Blogger</h2></li>
+    </ul>
+</section>    
+
+<section class = "nav-below">
+    <ul>    
+        <li><h5>The site is in development phase!!!! Some features may not work intened.</h5></li>
+    </ul>
+</section>    
+
+<section class = "message:">
+    <ul>    
+        <li><h6><%= message%> </h6></li>
+    </ul>
+</section>    
+
+
+
+
+<section class = form>
+        
+    <form action="/login" method="POST">
+        <div>Login</div>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br />
+
+        <input class = 'button1' type="submit" value="Submit">
+
+      </form>  
+
+
+    <form action="/signup" method="POST">
+        <div>New user? Signup</div>
+        <label for="username">Username:</label>
+        <input type="text" required id="username" name="username">
+        
+        <label for="email">Email:</label>
+        <input type="text" required id="email" name="email">
+
+        <label for="password">Password:</label>
+        <input type="password" required id="password" name="password"><br />
+
+
+        <input class = 'button1' type="submit" value="Submit">
+      </form>
+      
+</section>
+
+
+
+</body>
+</html>

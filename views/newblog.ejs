@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/newblog.css" />
+    <link rel="shortcut icon" href="../public/img/blogging.png" type="image/png">
+
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    
+<section class='content'>   
+    <div class="title">Create a New Blog</div>
+    <div>
+
+        <form action="/writeblog" method="post" enctype="multipart/form-data">
+
+            <label for="Title">Title:</label>
+            <input type="text" id="title" placeholder="Enter title of your Blog" name="title" required><br />
+
+            <label for="Title" style="font-style:italic">Upload a file with .jpg .jpeg or .png extension</label>
+            <input type="file" name="picture" required placeholder="Upload A Picture"/><br />
+
+            <span for="description">Description:</span>
+            <textarea id="description"required placeholder="Enter description of your Blog" name="description" rows="4" cols="100"></textarea>
+            <br />
+            <input type="submit" value="Submit">
+           
+        </form>
+        
+
+
+
+
+    </div>
+</section>
+
+
+
+
+</body>
+</html>

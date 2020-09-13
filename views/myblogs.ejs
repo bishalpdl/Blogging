@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/myblogs.css">
+    <link rel="shortcut icon" href="../public/img/blogging.png" type="image/png">
+
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+
+    <section class = "content">
+        <br />
+        <h1>Blogs Published by me:</h1>
+
+        <section class = "cards">
+
+
+            <% for (var blog of blogs) { %>
+            <div class="card">
+                <h2><a class ="new_a" href="/blog/<%= blog.id %>"><%= blog.title %></a></h2>
+                <br />
+                <span><a class ="new_a" href="/blog/<%= blog.id %>"><%= blog.description %></a></span>
+                
+                <div>
+                    <form>
+                        <button><a href= "/editblog/<%= blog.id %>">Edit</a></button>
+                    </form>
+
+                    <form method="POST" action="/deleteblog/<%= blog.id %>?_method=DELETE">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button>Delete</button>
+
+                    </form>
+                    
+
+                </div>
+            </div> 
+
+            <% }%>   
+
+
+</body>
+</html>

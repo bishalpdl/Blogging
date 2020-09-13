@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../public/img/blogging.png" type="image/png">
+
+    <link rel="stylesheet" href="/public/css/homepage.css" >
+</head>
+<body>
+
+
+    <%- include('partials/header.ejs') %>
+
+<div class="myblogs">
+    <a href="/myblogs">Myblogs</a>
+</div>
+
+
+
+<section class="discover">
+    <div class ="heading">Featured Blogs</div>
+    <div class="cards">
+    <% for(var featur of featur){ %>
+        
+        <span>
+            <div class='imag'><img src="data:image/jpeg;base64,<%= featur.picture %>"> </div>
+            <div class="title"><a href="/blog/<%= featur.id %>"><%= featur.title %></a></div>
+            <div class="info">author: <%= featur.author_username %> &nbsp;&nbsp; views: <%= featur.visitor %></div>
+            <div class="description"><a href="/blog/<%= featur.id %>"><%= featur.description %></a></div>
+        </span>
+    <% } %>
+
+    </div>
+    <hr />
+</section>
+
+<section class="random">
+    <section class="random_in">
+        <span class='title'>Blogs you may like</span>
+
+        <% for(var random_blog of random_blogs) { %>
+        <div class="r_cards">
+            <span class="card-text">
+                <div class="title"><a href="/blog/<%= random_blog.id %>"><%= random_blog.title %> </a></div>
+                <div class="description"> <a href="/blog/<%= random_blog.id %>"> <%= random_blog.description %> </a> </div>
+                <div class="information">author: <%= random_blog.author_username %> views: <%= random_blog.visitor %></div>
+            </span>
+            <span class="image"><img src="data:image/jpeg;base64,<%= random_blog.picture %>" ></span>
+        </div>
+        <% } %>
+
+        <!-- <span class="error recovery">
+        <div class="r_cards">
+            <span class="card-text">
+                <div class="title"><a href="#">Title </a></div>
+                <div class="description"><a href="#">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description</a> </div>
+                <div class="information">author</div>
+            </span>
+            <span class="image"><img src="logo.png"></span>
+        </div>
+        <div class="r_cards">
+            <span class="card-text">
+                <div class="title"><a href="#">Title </a></div>
+                <div class="description"><a href="#">des desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc  c desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc <a href="#">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description</a> </div>
+                <div class="information">author</div>
+            </span>
+            <span class="image"><img src="notices12.png".jpg"></span>
+        </div>
+        <div class="r_cards">
+            <span class="card-text">
+                <div class="title"><a href="#">Title </a></div>
+                <div class="description"><a href="#">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description</a> </div>
+                <div class="information">author</div>
+            </span>
+            <span class="image"><img src="Picture1.png"></span>
+        </div>
+
+        <div class="r_cards">
+            <span class="card-text">
+                <div class="title"><a href="#">Title </a></div>
+                <div class="description"><a href="#">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description</a> </div>
+                <div class="information">author</div>
+            </span>
+            <span class="image"><img src="Picture1.png"></span>
+        </div>
+        </span> -->
+
+
+    </section>
+</section>
+
+
+
+
+<!-- ---------------------------popular---------------- -->
+<section class="popular">
+
+    <div class="title"> Popular on Blogger:</div>
+
+    <div class="popular-div">
+
+        
+        <% for(var popular_blog of popular_blogs) { %>
+          <div class="popular-title">  <a href="/blog/<%= popular_blog.id %>"><%=popular_blog.title %> </a></div>
+        <% } %>
+
+    </div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

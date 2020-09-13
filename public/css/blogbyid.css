@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.blog{
+    background-color: black;
+}
+
+.blog .title{
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 2px;;
+    word-spacing:5px;
+    background-color: rgb(8, 8, 8);
+    padding: 12px;
+    padding-top: 20px;
+    font-size: 28px;
+
+    text-align: center;
+}
+
+
+.blog .info{
+    height: 20px;
+    font-size: 10px;
+    margin-left:12px;
+    background-color: black;
+    font-style: italic;
+}
+
+.blog .info ul{
+    background-color: rgb(0, 0, 0);
+
+    display:flex;
+    margin-left: 12px;   
+}
+
+.blog .info ul li{
+    display:flex;
+    margin-left: 12px;
+}
+
+
+.blog .pic{
+    width:100%;
+    background-color:rebeccapurple;
+    margin-top:20px;
+    height:80vh;    
+}
+
+.blog .pic-pic{
+    background-color: rgb(85, 184, 197);
+    margin-right:auto;
+    height: 80vh;
+    width: 100%;
+    overflow:hidden;
+}
+
+.blog img{
+
+    width:100%;
+    height:auto;
+        /* max-height:100%; */
+    
+    /* margin:auto;
+    max-width: 75%;
+    height:inherit;
+    max-height:500px;
+    min-width:50%; */
+}
+
+
+
+
+
+
+.blog .description{
+    padding: 20px;
+    width:80%;
+    margin:auto;
+    margin-bottom: 25px;
+    padding-top:50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.comment{
+    background-color: rgb(0, 0, 0);
+    border: 2px rgb(107, 107, 107) solid ;
+    border-radius: 12px;
+    margin:20px;
+    padding:10px;
+}
+
+.comment div{
+    padding: 12px;
+    width: 80%;
+    background-color:  black;
+    margin:auto;
+}
+
+#textarea{
+    display: flex;
+    border-radius: 10px;
+    border: 2px slategrey solid;
+    width: 80%;
+
+
+    padding: 8px;
+    background-color: rgb(39, 39, 39);
+    margin-bottom: 5px;
+    color:white;
+}
+
+form input{
+    border-radius: 10px;
+    border: 2px slategrey solid;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+
+.comment .comment-ith{
+    width: 80%;
+    display: flex;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 4px;;
+    border: 2px slategrey solid;
+}
+

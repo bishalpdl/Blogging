@@ -1,0 +1,70 @@
+
+
+
+.nav-bar{
+    position: sticky;
+}
+
+ul{
+    display:flex;
+    background-color:rgb(51, 51, 51);
+    list-style:none;
+    height:8vh;
+    min-height: 36px;
+}
+
+ul span{
+    display:flex;
+    height:100%;
+    align-items:center;
+    margin:auto;
+}
+
+li{
+    display:flex;
+    height:100%;
+    align-items:center;
+}
+
+.new-note button{
+    height:80%;
+    padding:0 10px;
+    font-size:20px;
+    background-color: white;
+    color: #61dfff;
+    border: 2px solid #61dfff;
+    border-radius:20px;
+    cursor:pointer;
+    margin-left:18px;
+}
+.new-note button a{
+    text-decoration:none;
+}
+
+
+.new-note button:hover{
+    background-color: #61dfff;
+    border-color:#61dfff;
+    color: rgb(161, 159, 159);
+}
+
+.user-profile{
+    /* margin-left:20px; */
+    height:90%;
+    margin-right: 32px;
+}
+
+li img{
+    max-height: 80%;
+    widtH:auto;
+}
+
+li h2{
+    color: whitesmoke;
+    padding-left:2px;
+}
+
+.company-name li a{
+    text-decoration:none;
+    color:inherit
+}

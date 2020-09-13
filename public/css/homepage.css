@@ -1,0 +1,321 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+
+}
+
+
+body{
+    background-color: rgb(32, 32, 32);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+.myblogs{
+    margin:2px;
+    padding:10px 0px 10px 25px ;
+}
+.myblogs a{
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius:12px;
+    color: white;
+    border-radius: 5px;
+    padding:3px;
+}
+.myblogs a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+/* ------------------main-content------------ */
+
+section.discover{
+    background-color:rgb(15, 15, 15);
+    padding-bottom: 12px;
+}
+
+section div.heading{
+    padding: 12px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    word-spacing: 5px;
+
+}
+
+section div.cards{
+    display: flex;
+    height: 500px;
+    width: 1000px;
+    margin:auto;
+    padding: 12px;
+    justify-content: center;
+
+}
+
+
+
+section div.cards span{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(51, 51, 51);
+    height: 100%;
+    padding:8px;
+    width:45%;
+    justify-content: center;
+    border: 3px solid rgb(110, 110, 110);
+    border-radius:12px;
+    justify-content:space-evenly;
+    margin-right: 15px;
+}
+
+section div.cards span:hover{
+
+    border: 3px solid rgb(190, 190, 190);
+}
+
+section div.cards span a{
+    text-decoration:none;
+    color:inherit;
+}
+
+section div.cards span div{
+    padding: 8px;
+    height: 200px;
+    width:100%;
+    overflow: hidden;
+    padding:0px;
+
+}
+
+
+
+section div.cards span div img{
+    width: 420px;
+    height:auto;
+    overflow: hidden;
+    border-radius:12px;
+}
+
+
+section div.cards span div.title{
+    height: 16%;
+    font-size: 23px;
+    margin-top:5px;
+
+}
+
+section div.cards span div.description{
+    height: 25%;
+
+}
+section div.cards span div.info{
+    font-style: italic;
+    font-size:12px;
+    height: 8%;
+}
+
+/* ---------------------Random-------------------------- */
+
+section.random{
+    background-color: black;
+    background-image: linear-gradient(black, rgb(44,44,44));
+}
+
+section.random_in{
+    width: 1000px;
+    margin:auto;
+    padding: 12px;
+}
+
+span.title{
+    width:100%;
+    font-size: 24px;
+    margin-bottom: 5px;
+    background-color:rgb(0, 0, 0);
+}
+
+span.card-text a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+div.r_cards{
+    width:100%;
+    background-color: rgb(51, 51, 51);
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    height: 125px;
+    width:100%;
+    margin-top:2px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 12px 0px 0px 12px  ;
+}
+
+div.r_cards:hover{
+    border-left: 8px solid rgb(255, 255, 255);
+}
+
+
+.card-text{
+    padding:8px;
+    width:85%;
+}
+
+.r_cards .title{
+    font-size: 22px;
+    height: 25%;
+    overflow: hidden;
+
+}
+
+.r_cards .description{
+    /* background-color: red; */
+    height: 60%;
+    overflow: hidden;
+}
+
+.r_cards .information{
+    /* background-color: rgb(233, 168, 168); */
+    height:20px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+
+
+
+
+div.r_cards span.image{
+    margin-left: auto;
+    background-color:rgb(0, 0, 0);
+    width:150px;
+    display:flex;
+}
+
+div.r_cards span.image img{
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items: center;
+}
+
+
+
+/* ------------popular------------------------- */
+
+section.popular{
+    width:1000px;
+    margin:auto;
+    padding:10px;
+    padding-bottom: 100px;;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+section.popular div.title{
+    text-align: center;
+    padding: 20px 0px;
+
+}
+
+section.popular div.popular-div{
+    display:flex;
+    flex-wrap: wrap;
+    width:98%;
+    margin:auto;
+    padding:12px 0px;
+    justify-content: center;
+
+}
+
+div.popular-div .popular-title{
+    margin-bottom: 4px;
+    border:2px solid;
+    display: flex;
+    margin: 12px 15px 15px 10px;
+    width:25%;
+    height: 180px;
+    overflow:hidden;
+    padding: 9px;
+    
+    
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px rgb(158, 158, 158);
+
+}
+
+div.popular-div .popular-title a{
+    text-decoration: none;
+    color:white;
+}
+
+
+div.popular-div .popular-title:hover{
+    box-shadow: none;
+    padding:12px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    section div.cards{
+        width: 768px;
+    }
+
+    section.random_in{
+        width:95%;
+    }
+
+    section.popular{
+        width:98%;
+    }
+
+    section.popular div.popular-title{
+        width:200px;
+        overflow:hidden;
+    }
+
+}
+ 
+@media only screen and (max-width: 768px) {
+
+    section.discover {
+        height:1200px;
+    }
+    section div.cards{
+        background-color: yellow;
+        height: 90%;
+    }
+
+    section div.cards{
+        width: 80%;
+        display:flex;
+        flex-direction: column;
+
+    }
+    section div.cards span{
+        width:100%;
+        margin:auto;
+        margin-bottom: 10px;
+    }
+    section div.cards span div img{
+        width: 560px;
+    }
+
+}
