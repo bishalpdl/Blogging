@@ -3,10 +3,10 @@
 
 <div>start by installing dependencies:</div>
 
->> npm install
+> npm install
 <div>To Run the application:</div>
 
->> npm run start
+> npm run start
 <div>To run application for dev purpose:</div>
 
->> npm run dev
+> npm run dev
